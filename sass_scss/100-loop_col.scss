@@ -8,12 +8,9 @@ col-4 with width equals to 25%
 You must create .col-* class from 1 to 4
 You must use a @for statement
 */
-@use "sass:math";
-$width: 100%;
-@debug ($width*2);
 
 @for $i from 1 through 4 {
   .col-#{$i} {
-    width: math.div(100%, #{$i}); 
+    width: calc(100% / #{$i}); 
   }
 }
